@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "tree-menu"
 version = "2.0"
-description = "this is simple tree-menu for web app"
+description = "this is simple test tree-menu for web app"
 authors = ["Artem Oleynikov"]
 
 [tool.poetry.dependencies]
