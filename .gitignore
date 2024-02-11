@@ -1,2 +1,8 @@
 .vscode
 __pycache__/
+.flake8
+.dockerignore
+.prettierignore
+.idea
+README.md
+pyproject.toml

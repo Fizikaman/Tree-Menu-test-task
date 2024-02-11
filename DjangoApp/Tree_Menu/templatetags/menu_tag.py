@@ -1,15 +1,15 @@
 from django import template
 from django.template import RequestContext
 
-from ..models import MenuBar
+from ..models import TreeMenuBar
 
 register = template.Library()
 
 
-@register.inclusion_tag('Menu/menu_pattern.html', takes_context=True)
+@register.inclusion_tag('Tree_Menu/menu_pattern.html', takes_context=True)
 def draw_menu(context=RequestContext, menu_name=''):
     url_path = (context.request.path).replace("/", "")
-    menu_queryset = MenuBar.objects\
+    menu_queryset = TreeMenuBar.objects\
         .filter(category__name=menu_name)\
         .select_related('parent')
     haveChild = have_children(menu_queryset)

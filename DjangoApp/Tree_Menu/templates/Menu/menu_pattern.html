@@ -8,7 +8,7 @@
         {% else %}
           <a href="{{ item.url }}">{{ item.title }} • </a>
         {% endif %}
-        {% include 'Menu/menu_pattern.html' with parent=item.id %}
+        {% include 'Tree_Menu/menu_pattern.html' with parent=item.id %}
       </li>
       {% else %}
       <li>
